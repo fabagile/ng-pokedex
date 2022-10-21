@@ -1,0 +1,30 @@
+.pointer {
+  cursor: pointer;
+}
+
+  .clickable {
+    cursor: pointer;
+  }
+  .clickable, .clickable:hover {
+    transition: all 250ms linear;
+  }
+
+  .clickable:hover * {
+    text-decoration: underline;
+    /* opacity: 0.8; */
+    color: blueviolet;
+    /* font-weight:400; */
+    /* transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01); */
+}
+  .type {
+    border: none;
+    text-align: center;
+    margin: 8px;
+    border-radius: 34px;
+    padding: 12px;
+    background-color: aquamarine;
+  }
