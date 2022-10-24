@@ -23,10 +23,9 @@ export class BorderCardDirective {
     this.setBorder(this.initialColor);
   }
 
-  private setHeight(height: number) {
-    this.el.nativeElement.style.height = `${height}px`;
-  }
-  private setBorder(color: string) {
+  private setHeight = (height: number) => this.el.nativeElement.style.height = `${height}px`
+  
+  private setBorder = (color: string) => {
     let border = "solid 4px " + color;
     this.el.nativeElement.style.border = border;
   }
