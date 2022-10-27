@@ -20,12 +20,22 @@ export class DetailPokemonComponent implements OnInit {
   ngOnInit() {
     const pokemonId: string | null = this.route.snapshot.paramMap.get("id");
     if (pokemonId) {
-      this.pokemon = this.pokemonService.getPokemonById(+pokemonId);
-      // this.pokemon = this.pokemonList.find(pokemon => pokemon.id == +pokemonId)
-      // } else {
-      //   this.pokemon = undefined
+      this.pokemonService
+        .getPokemonById(+pokemonId)
+        .subscribe((pokemon) => (this.pokemon = pokemon));
     }
   }
 
-  goBack = () => this.router.navigate(["/pokemons"])
+  goBack() {
+    this.router.navigate(["/pokemons"]);
+  }
+
+  editPokemon(pokemon: Pokemon) {
+    this.router.navigate(["/edit/pokemon", pokemon.id]);
+  }
+  deletePokemon(pokemon:Pokemon) {
+    this.pokemonService.deletePokemonById(pokemon.id)
+    .subscribe(()=> this.goBack())
+    // this.goBack()
+  }
 }
