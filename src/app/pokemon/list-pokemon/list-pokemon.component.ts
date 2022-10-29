@@ -19,6 +19,10 @@ export class ListPokemonComponent implements OnInit {
       .subscribe((pokemonList) => this.pokemonList = pokemonList );
   }
 
+  newPokemon() {
+    this.router.navigate(['/pokemon/add'])
+  }
+
   goToPokemon(pokemon: Pokemon) {
     this.router.navigate(["/pokemon", pokemon.id]);
   }
