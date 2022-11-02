@@ -5,10 +5,6 @@ import { Pokemon } from "../pokemon";
   selector: "app-loader",
   templateUrl: "./loader.component.html",
 })
-export class LoaderComponent implements OnInit {
+export class LoaderComponent {
   pokemon: Pokemon;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

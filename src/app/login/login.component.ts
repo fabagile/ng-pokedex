@@ -8,7 +8,7 @@ import { AuthService } from "../auth.service";
   styles: [],
 })
 export class LoginComponent implements OnInit {
-  message = "vous êtes déconnecté";
+  message = "vous êtes déconnecté (pikachu/pikachu)";
   name: string;
   password: string;
   auth: AuthService;
@@ -20,11 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
   setMessage() {
-    if (this.auth.isLoggedIn) {
-      this.message = "vous êtes connecté";
-    } else {
-      this.message = "Identifiant ou MDP incorract";
-    }
+    this.message = this.auth.isLoggedIn
+      ? "vous êtes connecté"
+      : "Identifiant ou MDP incorrect";
   }
 
   login() {

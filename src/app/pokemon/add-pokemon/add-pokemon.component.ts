@@ -7,7 +7,6 @@ import { Pokemon } from "../pokemon";
     <h2 class="center">Ajout d'un pokémon</h2>
     <app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>
   `,
-  styles: [],
 })
 export class AddPokemonComponent implements OnInit {
   pokemon: Pokemon | null;

@@ -13,6 +13,5 @@ import { Component } from "@angular/core";
       </a>
     </div>
   `,
-  styles: [],
 })
 export class PageNotFoundComponent {}
