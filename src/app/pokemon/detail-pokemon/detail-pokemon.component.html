@@ -47,13 +47,15 @@
           </table>
         </div>
         <div class="card-action">
-          <a (click)="goBack()" class="pointer" >Retour</a>
-          <a (click)="editPokemon(pokemon)" class="pointer" >Editer</a>
-          <a (click)="deletePokemon(pokemon)" class="pointer" >Supprimer</a>
+          <a (click)="goBack()" class="pointer">Retour</a>
+          <a (click)="editPokemon(pokemon)" class="pointer">Editer</a>
+          <a (click)="deletePokemon(pokemon)" class="pointer">Supprimer</a>
           <!-- <a href="pokemons">Retour</a> -->
         </div>
       </div>
     </div>
   </div>
 </div>
-<app-loader *ngIf="!pokemon"></app-loader>
+<h3 class="center" *ngIf="!pokemon">
+  <app-loader></app-loader>
+</h3>

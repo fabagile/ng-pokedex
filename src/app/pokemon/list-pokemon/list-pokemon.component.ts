@@ -6,7 +6,6 @@ import { PokemonService } from "../pokemon.service";
 @Component({
   selector: "app-list-pokemon",
   templateUrl: "./list-pokemon.component.html",
-  // styles: [],
 })
 export class ListPokemonComponent implements OnInit {
   pokemonList: Pokemon[] | undefined;
@@ -16,11 +15,11 @@ export class ListPokemonComponent implements OnInit {
   ngOnInit() {
     this.pokemonService
       .getPokemonList()
-      .subscribe((pokemonList) => this.pokemonList = pokemonList );
+      .subscribe((pokemonList) => (this.pokemonList = pokemonList));
   }
 
   newPokemon() {
-    this.router.navigate(['/pokemon/add'])
+    this.router.navigate(["/pokemon/add"]);
   }
 
   goToPokemon(pokemon: Pokemon) {

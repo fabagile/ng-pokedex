@@ -1,14 +1,20 @@
-<!-- <p>list-pokemon works!</p> -->
-
 <div class="container">
-  <app-search-pokemon ></app-search-pokemon>
-  <a role="button" class="btn-floating btn-large waves-effect waves-light z-depth-3 red" style="position: fixed; bottom: 25px; right: 25px" routerLink="/pokemon/add" >
-  <!-- <a role="button" class="btn-floating btn-large waves-effect waves-light z-depth-3" style="position: fixed; bottom: 25px; right: 25px" (click)="newPokemon()" > -->
+  <app-search-pokemon></app-search-pokemon>
+  <a
+    role="button"
+    class="btn-floating btn-large waves-effect waves-light z-depth-3 red"
+    style="position: fixed; bottom: 25px; right: 25px"
+    routerLink="/pokemon/add"
+  >
     &plus;
   </a>
   <div class="row">
     <div *ngFor="let pokemon of pokemonList" class="col m4 s6 l4">
-      <div (click)="goToPokemon(pokemon)" class="card horizontal pointer" pkmnBorderCard >
+      <div
+        (click)="goToPokemon(pokemon)"
+        class="card horizontal pointer"
+        pkmnBorderCard
+      >
         <div class="card-image">
           <img [src]="pokemon.picture" />
         </div>
